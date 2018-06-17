@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# USE:
+#
+#   * br URL              # open URL in the default browser
+#   * br --listen         # starts a browser daemon -- handy when trying to
+#                         # open URLs from a remote ssh session
+
 BR_REMOTE_PORT=${BR_REMOTE_PORT:-5557}
 
 listen() {
@@ -36,7 +42,7 @@ myopen() {
         echo -n "$@" | nc localhost ${BR_REMOTE_PORT}
     elif hash open 2>/dev/null; then
         open "$@"
-    else 
+    else
         cygstart "$@"
     fi
 }
