@@ -87,5 +87,5 @@ While the following sets the default `netrw` browser command to be `br` --
 finally `:Gbrowse` will start behaving again, even inside remote sessions:
 
 ```vimscript
-let g:netrw_browsex_viewer = "git web--browse"
+let g:netrw_browsex_viewer = "br"
 ```
