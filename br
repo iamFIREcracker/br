@@ -39,7 +39,7 @@ END
 
 myopen() {
     if env | grep --quiet -F SSH_TTY; then
-        echo -n "$@" | nc localhost ${BR_REMOTE_PORT}
+        echo -n "$@" | nc -N localhost ${BR_REMOTE_PORT}
     elif hash open 2>/dev/null; then
         open "$@"
     else
