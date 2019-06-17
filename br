@@ -29,6 +29,7 @@ while True:
 process = subprocess.Popen(['$0', input], stdin=subprocess.PIPE)
 process.wait()
 print('Open: ' + input)
+remote.close()
 s.close()
 END
         if [ $? -ne 0 ]; then
