@@ -41,12 +41,12 @@ END
 myopen() {
     if env | grep --quiet -F SSH_TTY; then
         echo -n "$@" | nc -N localhost ${BR_REMOTE_PORT}
-    elif hash explorer.exe 2>/dev/null; then
-        explorer.exe "$@"
     elif hash open 2>/dev/null; then
         open "$@"
-    else
+    elif hash cygstart 2>/dev/null; then
         cygstart "$@"
+    else
+        explorer.exe "$@"
     fi
 }
 
