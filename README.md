@@ -25,6 +25,16 @@ I thought maybe I can re-use some if it and build something that would make
 
 _enters `br`.._
 
+# Installation
+
+Clone the repo, and run `make install`:
+
+    mkdir -p ~/opt/
+    cd ~/opt
+    git clone https://github.com/iamFIREcracker/br.git
+    cd br
+    PREFIX=~/local/bin make install
+
 # Usage
 
 Opening a URL from the command-line is as simple as:
